@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUMINA - Luxury Minimalist Skincare. Pure botanical actives formulated to restore your natural skin barrier. Inspired by aesthetic apothecary.">
+  <title>LUMINA | Luxury Minimalist Skincare</title>
+  
+  <!-- Critical CSS & Prefetches -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+
+  <!-- 1. Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-text">Complimentary Shipping on Orders Over $75 — Code: LUMINA</div>
+  </div>
+
+  <!-- 2. Header & Sticky Nav -->
+  <header id="site-header">
+    <div class="container nav-container">
+      
+      <!-- Mobile Hamburger -->
+      <button class="header-btn menu-toggle" aria-label="Toggle Menu" id="menu-toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="/index.html" class="logo" id="site-logo">LUMINA<span>.</span></a>
+
+      <!-- Desktop Mega Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/collection.html" class="nav-link">Shop All
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            
+            <!-- MEGA MENU -->
+            <div class="mega-menu" id="mega-menu-collection">
+              <div class="mega-column">
+                <h4>By Category</h4>
+                <ul>
+                  <li><a href="/collection.html?category=cleansers">Gentle Cleansers</a></li>
+                  <li><a href="/collection.html?category=toners">Exfoliating Toners</a></li>
+                  <li><a href="/collection.html?category=serums">Active Serums</a></li>
+                  <li><a href="/collection.html?category=creams">Barrier Creams</a></li>
+                  <li><a href="/collection.html?category=sunscreen">Daily SPF</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>By Skin Concern</h4>
+                <ul>
+                  <li><a href="/collection.html?concern=dryness">Dryness & Dehydration</a></li>
+                  <li><a href="/collection.html?concern=dullness">Dullness & Uneven Tone</a></li>
+                  <li><a href="/collection.html?concern=aging">Fine Lines & Aging</a></li>
+                  <li><a href="/collection.html?concern=sensitive">Sensitized Skin Barrier</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Featured Routine</h4>
+                <ul>
+                  <li><a href="/collection.html?routine=glow">The 3-Step Radiance Routine</a></li>
+                  <li><a href="/collection.html?routine=barrier">The Ultimate Hydration Trio</a></li>
+                  <li><a href="/collection.html?routine=night">The Restorative Night Ritual</a></li>
+                  <li><a href="/collection.html?routine=starter">The Essential Daily Set</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <div class="mega-promo">
+                  <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="The Ritual" referrerPolicy="no-referrer">
+                  <div class="mega-promo-overlay"></div>
+                  <div class="mega-promo-content">
+                    <h5>The Bakuchiol Youth Cream</h5>
+                    <span>Discover More</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="/about.html" class="nav-link">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Items (Search, Cart Icons) -->
+      <div class="header-actions">
+        <!-- Search Button -->
+        <button class="header-btn search-toggle" aria-label="Open Search" id="search-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <!-- Shopping Bag Button -->
+        <button class="header-btn cart-toggle" aria-label="Open Bag" id="cart-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge cart-count" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. Mobile Menu Drawer -->
+  <aside class="mobile-menu-drawer" aria-label="Mobile Navigation" id="mobile-menu">
+    <div class="drawer-header">
+      <div class="logo">LUMINA<span>.</span></div>
+      <button class="header-btn mobile-drawer-close" aria-label="Close Menu" id="mobile-menu-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-nav-list">
+      <li><a href="/index.html" class="mobile-nav-link">Home</a></li>
+      <li>
+        <div class="mobile-nav-link">
+          <a href="/collection.html">Shop All</a>
+          <button class="mobile-submenu-trigger" aria-label="Expand Shop Submenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+        <ul class="mobile-submenu">
+          <li><a href="/collection.html?category=cleansers">Gentle Cleansers</a></li>
+          <li><a href="/collection.html?category=toners">Exfoliating Toners</a></li>
+          <li><a href="/collection.html?category=serums">Active Serums</a></li>
+          <li><a href="/collection.html?category=creams">Barrier Creams</a></li>
+          <li><a href="/collection.html?category=sunscreen">Daily SPF</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html" class="mobile-nav-link">Our Story</a></li>
+      <li><a href="/contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- 4. Search Overlay Popup -->
+  <div class="search-popup" id="search-modal">
+    <div class="search-popup-header">
+      <button class="header-btn search-popup-close" aria-label="Close Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="search-popup-body">
+      <div class="search-form-container">
+        <input type="text" class="search-input" placeholder="Search our apothecary..." aria-label="Search inputs">
+        <button class="search-icon-btn" aria-label="Submit Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+      <div class="search-suggestions">
+        <h4>Trending Products</h4>
+        <div class="suggestion-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Bag" id="cart-drawer-element">
+    <div class="cart-drawer-header">
+      <h3 class="font-sans" style="font-size: 1.1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Your Shopping Bag (<span class="cart-count">0</span>)</h3>
+      <button class="header-btn cart-drawer-close" aria-label="Close Bag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <!-- Dynamic Cart Container -->
+    <div class="cart-items-container">
+      <!-- Populated dynamically via JS -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span class="cart-summary-label">Estimated Subtotal</span>
+        <span class="cart-summary-value" id="cart-subtotal">$0.00</span>
+      </div>
+      <p>Shipping, taxes, and discounts calculated at checkout.</p>
+      <button class="btn btn-primary cart-checkout-btn" onclick="alert('Proceeding to checkout mockup!')">Check Out</button>
+    </div>
+  </aside>
+
+  <!-- Global Backdrop Overlay for drawers -->
+  <div class="drawer-overlay" id="drawer-bg-overlay"></div>
+
+  <!-- MAIN BODY CONTENT -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="home-hero">
+      <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1920&q=80" alt="LUMINA Clean Apothecary Visual" class="hero-bg-img" loading="eager" referrerPolicy="no-referrer">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content reveal">
+        <span class="hero-subtitle">The Science of Subtle Radiances</span>
+        <h1 class="hero-title">Restorative Barrier Formulas</h1>
+        <p class="hero-text">Formulated with premium botanical bio-actives and skin-identical peptides to repair and protect your barrier. Dermatologist approved. Clean, vegan, fragrance-free.</p>
+        <div class="hero-btn-row">
+          <a href="/collection.html" class="btn btn-primary">Shop The Collection</a>
+          <a href="/about.html" class="btn btn-secondary">Our Philosophy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section section-padding" id="brand-benefits">
+      <div class="container grid-benefits">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="benefit-title">Dermatologist Approved</h3>
+          <p class="benefit-desc">Our formulas are clinically tested on sensitive skin profiles to guarantee absolute tolerance and efficacy.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3 class="benefit-title">100% Vegan & Cruelty-Free</h3>
+          <p class="benefit-desc">We never test on animals and refuse any ingredients derived from animal byproducts. Pure ethical science.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="benefit-title">Restored in 7 Days</h3>
+          <p class="benefit-desc">Clinically proven to repair skin moisture barriers, locking in skin hydration for up to 72 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="featured-products section-padding" id="bestsellers">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-subtitle">Curated Rituals</span>
+            <h2 class="section-title">The Best Sellers</h2>
+          </div>
+          <a href="/collection.html" class="btn-link">View All Products 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="grid-products">
+          <!-- Product Card 1 -->
+          <div class="product-card reveal">
+            <div class="product-card-img-wrap">
+              <span class="product-tag sale">Sale</span>
+              <button class="product-card-wishlist" aria-label="Add to wishlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <a href="/product.html?id=peptide-cleanser">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80" alt="The Silk Peptide Cleanser" class="product-card-img" referrerPolicy="no-referrer">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=600&q=80" alt="Cleanser Detail" class="product-card-img-hover" referrerPolicy="no-referrer">
+              </a>
+              <button class="product-card-quick-add" data-product-id="peptide-cleanser" data-add-to-cart>Quick Add</button>
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Cleansers</span>
+              <a href="/product.html?id=peptide-cleanser" class="product-card-title">The Silk Peptide Cleanser</a>
+              <div class="product-card-rating">
+                ★★★★★ <span class="product-card-rating-text">(124 reviews)</span>
+              </div>
+              <div class="product-card-price-row">
+                <span class="product-card-price">$34.00</span>
+                <span class="product-card-compare-price">$42.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card reveal">
+            <div class="product-card-img-wrap">
+              <span class="product-tag">Hot</span>
+              <button class="product-card-wishlist" aria-label="Add to wishlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <a href="/product.html?id=barrier-serum">
+                <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=600&q=80" alt="Barrier Repair Serum" class="product-card-img" referrerPolicy="no-referrer">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="Serum Detail" class="product-card-img-hover" referrerPolicy="no-referrer">
+              </a>
+              <button class="product-card-quick-add" data-product-id="barrier-serum" data-add-to-cart>Quick Add</button>
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Serums</span>
+              <a href="/product.html?id=barrier-serum" class="product-card-title">Barrier Repair Serum</a>
+              <div class="product-card-rating">
+                ★★★★★ <span class="product-card-rating-text">(89 reviews)</span>
+              </div>
+              <div class="product-card-price-row">
+                <span class="product-card-price">$48.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card reveal">
+            <div class="product-card-img-wrap">
+              <button class="product-card-wishlist" aria-label="Add to wishlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <a href="/product.html?id=youth-cream">
+                <img src="https://images.unsplash.com/photo-1631730359575-38e4755d772b?auto=format&fit=crop&w=600&q=80" alt="Bakuchiol Youth Cream" class="product-card-img" referrerPolicy="no-referrer">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=600&q=80" alt="Cream Detail" class="product-card-img-hover" referrerPolicy="no-referrer">
+              </a>
+              <button class="product-card-quick-add" data-product-id="youth-cream" data-add-to-cart>Quick Add</button>
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Creams</span>
+              <a href="/product.html?id=youth-cream" class="product-card-title">Bakuchiol Youth Cream</a>
+              <div class="product-card-rating">
+                ★★★★★ <span class="product-card-rating-text">(165 reviews)</span>
+              </div>
+              <div class="product-card-price-row">
+                <span class="product-card-price">$64.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card reveal">
+            <div class="product-card-img-wrap">
+              <span class="product-tag sale">Sale</span>
+              <button class="product-card-wishlist" aria-label="Add to wishlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <a href="/product.html?id=pha-toner">
+                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80" alt="Resurfacing PHA Toner" class="product-card-img" referrerPolicy="no-referrer">
+                <img src="https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&w=600&q=80" alt="Toner Detail" class="product-card-img-hover" referrerPolicy="no-referrer">
+              </a>
+              <button class="product-card-quick-add" data-product-id="pha-toner" data-add-to-cart>Quick Add</button>
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Toners</span>
+              <a href="/product.html?id=pha-toner" class="product-card-title">Resurfacing PHA Toner</a>
+              <div class="product-card-rating">
+                ★★★★★ <span class="product-card-rating-text">(52 reviews)</span>
+              </div>
+              <div class="product-card-price-row">
+                <span class="product-card-price">$38.00</span>
+                <span class="product-card-compare-price">$46.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients-section" id="active-ingredients">
+      <div class="ingredients-visual reveal">
+        <img src="https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&w=1200&q=80" alt="Botanical Active Elements" loading="lazy" referrerPolicy="no-referrer">
+      </div>
+      <div class="ingredients-content">
+        <div class="ingredients-intro reveal">
+          <span class="section-subtitle">Bio-Actives with Purpose</span>
+          <h2 class="section-title">The Active Apothecary</h2>
+          <p>We craft formulas focused on cellular integrity. High percentages of active compounds are stabilized within biomimetic delivery bases to ensure penetration with zero sensitization.</p>
+        </div>
+        <div class="ingredients-list">
+          <!-- Ingredient 1 -->
+          <div class="ingredient-item reveal">
+            <div class="ingredient-item-header">
+              <h3 class="ingredient-name">Bakuchiol</h3>
+              <span class="ingredient-percentage">2.0%</span>
+            </div>
+            <p>A plant-derived natural retinol alternative that stimulates collagen synthesis, refines skin texture, and diminishes lines with none of the typical redness or scaling.</p>
+          </div>
+          <!-- Ingredient 2 -->
+          <div class="ingredient-item reveal">
+            <div class="ingredient-item-header">
+              <h3 class="ingredient-name">Ceramide NP Complex</h3>
+              <span class="ingredient-percentage">5.0%</span>
+            </div>
+            <p>Pure skin-identical lipids designed to fortify the lipid barrier, sealing vital moisture into intercellular spaces while preventing transepidermal water loss (TEWL).</p>
+          </div>
+          <!-- Ingredient 3 -->
+          <div class="ingredient-item reveal">
+            <div class="ingredient-item-header">
+              <h3 class="ingredient-name">Niacinamide</h3>
+              <span class="ingredient-percentage">4.0%</span>
+            </div>
+            <p>High-grade Vitamin B3 that gently inhibits hyperpigmentation, tightens enlarged pores, and stimulates natural ceramide production for unified luminosity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before / After Section -->
+    <section class="before-after-section section-padding" id="before-after-reveal">
+      <div class="container before-after-container">
+        
+        <div class="before-after-text reveal">
+          <span class="section-subtitle">Clinical Restorative Proof</span>
+          <h2 class="section-title">Skin Transformation</h2>
+          <p style="margin-bottom: 1.5rem;">Observe the clinical, real outcomes of the LUMINA Barrier repair line. In a 4-week clinical trial of 150 participants with compromised skin barriers:</p>
+          
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span class="gold-text" style="font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>97%</strong> reported immediate relief from tightness and flaking.</span>
+            </li>
+            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span class="gold-text" style="font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>94%</strong> experienced a visual reduction in redness and capillary stress.</span>
+            </li>
+            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span class="gold-text" style="font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>91%</strong> measured clinically stronger skin barriers within 7 days.</span>
+            </li>
+          </ul>
+          
+          <a href="/collection.html" class="btn btn-primary">Start Your Reset</a>
+        </div>
+
+        <!-- Before After Interactive Slider -->
+        <div class="comparison-slider-container reveal">
+          <!-- After Image -->
+          <img class="image-after" src="https://images.unsplash.com/photo-1522337360788-8b13edd793be?auto=format&fit=crop&w=1200&q=80" alt="Skin Restored After LUMINA" loading="lazy" referrerPolicy="no-referrer">
+          <span class="comparison-tag tag-after">After (Week 4)</span>
+
+          <!-- Before Image -->
+          <div class="image-before">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" alt="Dry Compromised Skin Before" loading="lazy" referrerPolicy="no-referrer">
+            <span class="comparison-tag tag-before">Before</span>
+          </div>
+
+          <!-- Slider Handle -->
+          <div class="slider-handle">
+            <div class="slider-handle-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 3 12 8 7"></polyline><polyline points="16 17 21 12 16 7"></polyline></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="testimonials-section section-padding" id="client-stories">
+      <div class="container">
+        <div class="testimonial-slide active reveal">
+          <div class="testimonial-rating">★★★★★</div>
+          <blockquote class="testimonial-quote">"The Barrier Repair Serum has fully resurrected my dry, peeling cheeks. For years I tried heavy creams that clogged my pores, but this is a featherlight miracle. Full marks to Lumina."</blockquote>
+          <div class="testimonial-author">Genevieve H. — <span>Verified Client</span></div>
+        </div>
+        
+        <div class="testimonial-slide reveal">
+          <div class="testimonial-rating">★★★★★</div>
+          <blockquote class="testimonial-quote">"As an aesthetician, I am incredibly demanding of ingredient profiles. Lumina uses active ratios that actually yield results without causing the underlying inflammation common in generic skincare."</blockquote>
+          <div class="testimonial-author">Dr. Marcus Vance — <span>Clinical Derm, NYC</span></div>
+        </div>
+
+        <div class="testimonial-slide reveal">
+          <div class="testimonial-rating">★★★★★</div>
+          <blockquote class="testimonial-quote">"My skin barrier has never felt so calm and unified. The redness across my nose has completely faded, leaving behind an elegant, bouncy glow. I will never use another cleanser."</blockquote>
+          <div class="testimonial-author">Rhea Kapoor — <span>London, UK</span></div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-arrow testimonial-prev" aria-label="Previous story">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+          <button class="testimonial-arrow testimonial-next" aria-label="Next story">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section section-padding" id="faq-accordions">
+      <div class="container">
+        
+        <div class="text-center" style="margin-bottom: 4rem;">
+          <span class="section-subtitle">Common Skin Queries</span>
+          <h2 class="section-title">Support & Guidance</h2>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-title">How do I know if my skin barrier is compromised?</span>
+              <span class="faq-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <p>Common symptoms include persistent stinging or burning when applying standard products, chronic dry patches, visible scaling, capillary redness, and sudden sensitivity to environmental shifts. The Lumina Barrier repair line is designed precisely to calm and address these compromised profiles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-title">Are LUMINA formulas safe for acne-prone or congested skin?</span>
+              <span class="faq-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <p>Absolutely. Our moisturizers and serums utilize lightweight biomimetic squalane and non-comedogenic lipids that seal in hydration without forming an occlusive barrier over pores. We formulate completely free of heavy mineral oils and pore-clogging waxes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-title">What order should I apply the LUMINA line?</span>
+              <span class="faq-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <p>For optimal results: cleanse with the Silk Peptide Cleanser, follow with the Resurfacing PHA Toner, pat on the Barrier Repair Serum, lock in with the Bakuchiol Youth Cream, and apply the Mineral Veil SPF daily. Apply from thinnest to thickest consistency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section-padding" id="newsletter-signup">
+      <div class="container newsletter-box reveal">
+        <span class="section-subtitle">Apothecary Dispatch</span>
+        <h2 class="section-title">Receive Gentle Updates</h2>
+        <p>Subscribe to receive curated educational journals, earliest previews of new formulas, and complimentary shipping notifications. No noise, just science.</p>
+        
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Lumina Journals!'); this.reset();">
+          <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email for newsletter" required>
+          <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Instagram Vanity Gallery Section -->
+    <section class="instagram-section" id="social-gallery">
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=400&q=80" alt="Lumina on Vanity Setup" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=400&q=80" alt="Serum bottle close up" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400&q=80" alt="Skincare routine textures" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=400&q=80" alt="Skincare cream swirled texture" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80" alt="Calming botanical leaves" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=400&q=80" alt="Beautiful vanity skincare collection" loading="lazy" referrerPolicy="no-referrer">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      
+      <div class="footer-brand-col">
+        <div class="footer-logo">LUMINA<span>.</span></div>
+        <p>Bespoke clinical botany. Restoring dermal hydration systems with precise, minimal formulation structures.</p>
+        <div class="footer-social-links">
+          <a href="#" class="social-link" aria-label="Follow on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Follow on Pinterest">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Apothecary</h4>
+        <ul class="footer-links">
+          <li><a href="/collection.html">Shop All Products</a></li>
+          <li><a href="/collection.html?category=cleansers">Gentle Cleansers</a></li>
+          <li><a href="/collection.html?category=serums">Active Serums</a></li>
+          <li><a href="/collection.html?category=creams">Barrier Creams</a></li>
+          <li><a href="/collection.html?category=sunscreen">Mineral SPF</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our House</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About LUMINA</a></li>
+          <li><a href="/about.html#science">Botanical Science</a></li>
+          <li><a href="/contact.html">Store Location</a></li>
+          <li><a href="/about.html#sustainability">Sustainability Charter</a></li>
+          <li><a href="/contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Client Services</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html#faq-accordions">FAQ & Support</a></li>
+          <li><a href="/contact.html">Corporate Gifting</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Skin Consultation</a></li>
+          <li><a href="#">Affiliate Guild</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 LUMINA Skincare LLC. All rights reserved. Designed in alignment with premium Shopify Theme directives.</p>
+      <div class="footer-payment-icons" aria-label="Supported Payment Methods">
+        <span style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Visa • MasterCard • Amex • ShopifyPay • ApplePay</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Loader -->
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>
