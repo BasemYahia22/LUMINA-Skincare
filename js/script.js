@@ -337,7 +337,7 @@ function renderCart() {
     container.innerHTML = `
       <div class="cart-empty-message">
         <p>Your shopping bag is empty.</p>
-        <a href="/collection.html" class="btn btn-primary">Shop All Products</a>
+        <a href="./collection.html" class="btn btn-primary">Shop All Products</a>
       </div>
     `;
     return;
@@ -883,7 +883,7 @@ function initCollectionFilters() {
       <div class="product-card reveal">
         <div class="product-card-img-wrap">
           ${p.tag ? `<span class="product-tag ${p.tag.toLowerCase()}">${p.tag}</span>` : ''}
-          <a href="/product.html?id=${p.id}">
+          <a href="./product.html?id=${p.id}">
             <img src="${p.image1}" alt="${p.name}" class="product-card-img" referrerPolicy="no-referrer">
             <img src="${p.image2}" alt="${p.name}" class="product-card-img-hover" referrerPolicy="no-referrer">
           </a>
@@ -891,7 +891,7 @@ function initCollectionFilters() {
         </div>
         <div class="product-card-info">
           <span class="product-card-category">${p.category}</span>
-          <a href="/product.html?id=${p.id}" class="product-card-title">${p.name}</a>
+          <a href="./product.html?id=${p.id}" class="product-card-title">${p.name}</a>
           <div class="product-card-rating">
             ${Array(Math.floor(p.rating)).fill('★').join('')}
             ${p.rating % 1 !== 0 ? '½' : ''}
@@ -1063,7 +1063,7 @@ function initDynamicProductPage() {
       <div class="product-card reveal">
         <div class="product-card-img-wrap">
           ${p.tag ? `<span class="product-tag ${p.tag.toLowerCase()}">${p.tag}</span>` : ''}
-          <a href="/product.html?id=${p.id}">
+          <a href="./product.html?id=${p.id}">
             <img src="${p.image1}" alt="${p.name}" class="product-card-img" referrerPolicy="no-referrer">
             <img src="${p.image2}" alt="${p.name}" class="product-card-img-hover" referrerPolicy="no-referrer">
           </a>
@@ -1071,7 +1071,7 @@ function initDynamicProductPage() {
         </div>
         <div class="product-card-info">
           <span class="product-card-category">${p.category}</span>
-          <a href="/product.html?id=${p.id}" class="product-card-title">${p.name}</a>
+          <a href="./product.html?id=${p.id}" class="product-card-title">${p.name}</a>
           <div class="product-card-rating">
             ${'★'.repeat(Math.floor(p.rating))}
             ${p.rating % 1 !== 0 ? '½' : ''}
